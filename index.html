@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>I'm coding398</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="./index.css"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Hey! I'm Lachie. I love to program, and I've made some cool apps and games since I started at age 7.">
+        <meta name="author" content="Lachlan Noble">
+
+        <link rel="icon" type="image/png" href="/favicon.png" />
+    </head>
+    <body>
+        <cursor></cursor>
+        <hero>
+            <div class="tape">
+                <img src="./me.png" alt="coding398 at the Crown Hotel in Melbourne, Australia">
+                <p>not much of a photo guy.</p>
+            </div>
+            <div>
+                <h1>Hey! I'm Lachie</h1>
+                <p>I love to program, and I've made some cool apps and games since I started at age 7.
+                    <br>I especially like to make tools that are heavily automated, unique, funny and sometimes comically useless.
+                    <br>On this 3rd revamp of my website, you can find out more about me along with my past and upcoming projects.
+                </p>
+            </div>
+            <svg style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 140" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(3, 186, 252, 1)" offset="0%"></stop><stop stop-color="rgba(3, 186, 252, 0.5)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,70L48,74.7C96,79,192,89,288,81.7C384,75,480,51,576,46.7C672,42,768,56,864,67.7C960,79,1056,89,1152,88.7C1248,89,1344,79,1440,72.3C1536,65,1632,61,1728,49C1824,37,1920,19,2016,11.7C2112,5,2208,9,2304,11.7C2400,14,2496,14,2592,23.3C2688,33,2784,51,2880,53.7C2976,56,3072,42,3168,51.3C3264,61,3360,93,3456,100.3C3552,107,3648,89,3744,84C3840,79,3936,89,4032,79.3C4128,70,4224,42,4320,37.3C4416,33,4512,51,4608,65.3C4704,79,4800,89,4896,84C4992,79,5088,61,5184,60.7C5280,61,5376,79,5472,74.7C5568,70,5664,42,5760,46.7C5856,51,5952,89,6048,88.7C6144,89,6240,51,6336,35C6432,19,6528,23,6624,32.7C6720,42,6816,56,6864,63L6912,70L6912,140L6864,140C6816,140,6720,140,6624,140C6528,140,6432,140,6336,140C6240,140,6144,140,6048,140C5952,140,5856,140,5760,140C5664,140,5568,140,5472,140C5376,140,5280,140,5184,140C5088,140,4992,140,4896,140C4800,140,4704,140,4608,140C4512,140,4416,140,4320,140C4224,140,4128,140,4032,140C3936,140,3840,140,3744,140C3648,140,3552,140,3456,140C3360,140,3264,140,3168,140C3072,140,2976,140,2880,140C2784,140,2688,140,2592,140C2496,140,2400,140,2304,140C2208,140,2112,140,2016,140C1920,140,1824,140,1728,140C1632,140,1536,140,1440,140C1344,140,1248,140,1152,140C1056,140,960,140,864,140C768,140,672,140,576,140C480,140,384,140,288,140C192,140,96,140,48,140L0,140Z"></path></svg>
+        </hero>
+        <section id="projects">
+            <h2>PROJECTS! PAST, PRESENT & FUTURE</h2>
+            <div class="reel reel-big">
+                <div>
+                    <img src="./projects/mark.png">
+                    <btns>
+                        <button class="b featured"><i class="bi bi-stars"></i> FEATURED</button>
+                        <button class="b h" onclick="window.open('https://store.steampowered.com/app/2452240/Desktop_Mark/?utm_campaign=coding398-dev')">VIEW STEAM PAGE</button>
+                    </btns>
+                </div>
+                <div>
+                    <img src="./projects/dodecadone.png">
+                    <btns>
+                        <button class="b indev"><i class="bi bi-code-slash"></i> IN DEVELOPMENT</button>
+                        <button class="b h" onclick="window.open('https://dodecad.one/?utm_campaign=coding398-dev')">PLAY NOW</button>
+                    </btns>
+                </div>
+            </div>
+            <div>
+                <button class="scroller right" onclick="r()" aria-label="Scroll right">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+                <button  class="scroller left" onclick="l()" aria-label="Scroll left">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+                <div class="reel reel-small">
+                    <div class="ddd">
+                        <img src="/projects/dodecadone.png">
+                        <btns>
+                            <button class="b indev"><i class="bi bi-code-slash"></i> IN DEVELOPMENT</button>
+                            <button class="b h" onclick="window.open('https://dodecad.one/?utm_campaign=coding398-dev')">PLAY NOW</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/rocker.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://rocker.markets/?utm_campaign=coding398-dev')"><i class="bi bi-graph-up-arrow"></i> "INVEST" NOW</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/hexauth.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://hexauth.coding398.dev/?utm_campaign=coding398-dev')"><i class="bi bi-door-open-fill"></i> AUTH, FAST</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/277.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://277pages.info/?utm_campaign=coding398-dev')"><i class="bi bi-robot"></i> READ AI</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/jwa.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://jwa.coding398.dev/?utm_campaign=coding398-dev')"><i class="bi bi-globe"></i> PARTY</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/byte.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://one.byte.cheesgle.com/?utm_campaign=coding398-dev')"><i class="bi bi-globe"></i> PLAY NOW</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/cheesesocial.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://cheese.social/?utm_campaign=coding398-dev')"><i class="bi bi-people-fill"></i> SOCALISE</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/tyjam.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://tyjam.codingmaster398.repl.co/')"><i class="bi bi-boombox"></i> TYPE & JAM</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/filterremover.png">
+                        <btns>
+                            <button class="b h" onclick="window.open('https://image-filter-remover.coding398.dev/?utm_campaign=coding398-dev')"><i class="bi bi-globe"></i> WEBSITE</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/snake.png">
+                        <btns>
+                            <button class="b archive"><i class="bi bi-archive"></i> NOT AVAILABLE</button>
+                        </btns>
+                    </div>
+                    <div>
+                        <img src="/projects/cheesgle.png">
+                        <btns>
+                            <button class="b h"><i class="bi bi-globe"></i> SEARCH</button>
+                        </btns>
+                    </div>
+                </div>
+            </div>
+            <script>
+                item = document.querySelector(`.reel-small`)
+                
+                function r(){
+                    item.scrollBy({
+                        top: 0,
+                        left: 418,
+                        behavior: "smooth",
+                    });
+                }
+                function l(){
+                    item.scrollBy({
+                        top: 0,
+                        left: -418,
+                        behavior: "smooth",
+                    });
+                }
+            </script>
+            <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop><stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-1)" d="M0,30L48,30C96,30,192,30,288,40C384,50,480,70,576,68.3C672,67,768,43,864,30C960,17,1056,13,1152,15C1248,17,1344,23,1440,23.3C1536,23,1632,17,1728,18.3C1824,20,1920,30,2016,43.3C2112,57,2208,73,2304,68.3C2400,63,2496,37,2592,26.7C2688,17,2784,23,2880,21.7C2976,20,3072,10,3168,8.3C3264,7,3360,13,3456,15C3552,17,3648,13,3744,15C3840,17,3936,23,4032,35C4128,47,4224,63,4320,61.7C4416,60,4512,40,4608,28.3C4704,17,4800,13,4896,21.7C4992,30,5088,50,5184,50C5280,50,5376,30,5472,31.7C5568,33,5664,57,5760,65C5856,73,5952,67,6048,61.7C6144,57,6240,53,6336,45C6432,37,6528,23,6624,28.3C6720,33,6816,57,6864,68.3L6912,80L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"></path></svg>
+            
+        </section>
+        <section id="accomplishments">
+            <h2>Accomplishments & Reviews</h2>
+            <div id="awards">
+                <div class="award">
+                    <badge class="win">#1</badge>
+                    <h3>Replit ML Hackathon</h3>
+                    <p>$3,000 USD won for my first ever attempt at AI, an image filter remover.</p>
+                </div>
+                <div class="award">
+                    <badge><i class="bi bi-star-fill"></i></badge>
+                    <h3>ICAS High Distinction</h3>
+                    <p>Digital Technologies 2021</p>
+                </div>
+                <div class="award">
+                    <badge><i class="bi bi-star-fill"></i></badge>
+                    <h3>Merit - Melbourne Uni MSRC</h3>
+                    <p>Melbourne University Mathematics and Statistics Research Competition - Merit! Best in the class too :)</p>
+                </div>
+                <div class="award">
+                    <badge><i class="bi bi-star-fill"></i></badge>
+                    <h3>Academic Merit</h3>
+                    <p>Year 7 Semester 2</p>
+                </div>
+                <div class="award">
+                    <badge><i class="bi bi-star-fill"></i></badge>
+                    <h3>Academic Merit</h3>
+                    <p>Year 8 Semester 1 and 2</p>
+                </div>
+                <div class="award">
+                    <badge class="">4.7/5</badge>
+                    <h3>Bounty - ReplitIronclad</h3>
+                    <p>CodingMaster delivered high-quality content with amazing swiftness. His communication skills and coding skills are top-of-the line, would definitely recommend for your next Bounty.</p>
+                </div>
+                <div class="award">
+                    <badge class="win">5/5</badge>
+                    <h3>Bounty - Matthew_Morriso</h3>
+                    <p>No Comment</p>
+                </div>
+                <div class="award">
+                    <badge class=""><i class="bi bi-chat-fill"></i></badge>
+                    <h3>Desktop Mark Review</h3>
+                    <p>I really loved testing Desktop Mark. Lil mark who bounces around your screen, and sometimes gets in your way, but it's fun when that happens! Some minigames that will help you earn money to gain new customization. Overall, I love it!
+                        <br><br><i>~ bddy</i>
+                    </p>
+                </div>
+                <div class="award">
+                    <badge class=""><i class="bi bi-chat-fill"></i></badge>
+                    <h3>Desktop Mark Review</h3>
+                    <p>This game is really good, probably my favourite game right now.
+                        This game puts a smiley face named "Mark" that bounces around your screen kind of like a DVD screensaver
+                        ...
+                        This is a surprisingly good game
+                        <br><br><i>~ crapbass</i></p>
+                </div>
+                <div class="award">
+                    <badge class="win"><i class="bi bi-chat-fill"></i></badge>
+                    <h3>Desktop Mark Review</h3>
+                    <p>Hands down one of the best games of all time<br><br><i>~ jasermomm</i></p>
+                </div>
+                <div class="award">
+                    <badge class=""><i class="bi bi-chat-fill"></i></badge>
+                    <h3>Desktop Mark Review</h3>
+                    <p>Desktop Mark is art, a masterpiece that no other game in history could ever beat.
+                        The game takes an original spin on the idle game concept. Making it a small distraction to help with boredom.
+                        I am surprised as to why Desktop Mark wasn't nominated for Player's choice on the game awards.
+                    <br><br><i>~ Shaggy</i></p>
+                </div>
+                <div class="award">
+                    <badge class=""><i class="bi bi-chat-fill"></i></badge>
+                    <h3>Bookie my beloved</h3>
+                    <p>ooo yeah that neumorphism is pretty cool</p>
+                </div>
+                <div class="award">
+                    <grade class="win">A+</grade>
+                    <br>
+                    <h3>Y8 S1 Mathematics</h3>
+                </div>
+                <div class="award">
+                    <grade class="win">A+</grade>
+                    <br>
+                    <h3>Y8 S1 Science</h3>
+                </div>
+                <div class="award">
+                    <grade>A</grade>
+                    <br>
+                    <h3>Y8 S1 English</h3>
+                </div>
+                <div class="award">
+                    <grade>B+</grade>
+                    <br>
+                    <h3>Y8 S1 Humanities</h3>
+                </div>
+            </div>
+            <p>I'm just getting started with Year 9, so expect more from this section soon!</p>
+
+            <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(175.301, 62, 243, 1)" offset="0%"></stop><stop stop-color="rgba(151, 0, 198, 0.5)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-2)" d="M0,80L48,75C96,70,192,60,288,61.7C384,63,480,77,576,71.7C672,67,768,43,864,33.3C960,23,1056,27,1152,33.3C1248,40,1344,50,1440,60C1536,70,1632,80,1728,83.3C1824,87,1920,83,2016,68.3C2112,53,2208,27,2304,26.7C2400,27,2496,53,2592,68.3C2688,83,2784,87,2880,78.3C2976,70,3072,50,3168,43.3C3264,37,3360,43,3456,43.3C3552,43,3648,37,3744,36.7C3840,37,3936,43,4032,46.7C4128,50,4224,50,4320,51.7C4416,53,4512,57,4608,51.7C4704,47,4800,33,4896,31.7C4992,30,5088,40,5184,45C5280,50,5376,50,5472,48.3C5568,47,5664,43,5760,45C5856,47,5952,53,6048,58.3C6144,63,6240,67,6336,60C6432,53,6528,37,6624,31.7C6720,27,6816,33,6864,36.7L6912,40L6912,100L6864,100C6816,100,6720,100,6624,100C6528,100,6432,100,6336,100C6240,100,6144,100,6048,100C5952,100,5856,100,5760,100C5664,100,5568,100,5472,100C5376,100,5280,100,5184,100C5088,100,4992,100,4896,100C4800,100,4704,100,4608,100C4512,100,4416,100,4320,100C4224,100,4128,100,4032,100C3936,100,3840,100,3744,100C3648,100,3552,100,3456,100C3360,100,3264,100,3168,100C3072,100,2976,100,2880,100C2784,100,2688,100,2592,100C2496,100,2400,100,2304,100C2208,100,2112,100,2016,100C1920,100,1824,100,1728,100C1632,100,1536,100,1440,100C1344,100,1248,100,1152,100C1056,100,960,100,864,100C768,100,672,100,576,100C480,100,384,100,288,100C192,100,96,100,48,100L0,100Z"></path></svg>
+        </section>
+        <section id="contacts">
+            <h2>Let's talk</h2>
+            <div>
+                <span><i class="bi bi-discord"></i> Discord: coding398</span>
+                <span><i class="bi bi-discord"></i> <a href="https://discord.gg/mKd9gnSubR">Discord Server</a></span>
+                <span><i class="bi bi-twitter"></i> Twitter/X: @coding398</span>
+                <span><i class="bi bi-emoji-smile-fill"></i> <a href="https://cheese.social/profile/1">Cheese.social</a></span>
+                <span><i class="bi bi-envelope-fill"></i> lachienoble10@outlook.com</span>
+                <span><i class="bi bi-envelope-fill"></i> lachienoble11@gmail.com</span>
+            </div>
+            <br><br>
+            <i>coding398.dev (revision 3) © 2023 by Lachlan Noble is licensed under CC BY-NC-SA 4.0 </i>
+        </section>
+
+        <script>
+            let scr = setTimeout(()=>{},0)
+
+            window.addEventListener("mousemove", (event) => {
+                document.querySelector(`cursor`).style.transform = `translate(calc(${event.clientX}px - 50%), calc(${event.clientY}px - 50%))`
+
+                if(event.target.tagName == "A" || (event.target.tagName == "BUTTON" && event.target.classList.contains(`h`))){
+                    document.querySelector(`cursor`).classList.add(`link`)
+                }else{
+                    document.querySelector(`cursor`).classList.remove(`link`)
+                }
+            });
+
+            window.addEventListener(`wheel`, (e)=>{
+                if(e.deltaY > 0){
+                    document.querySelector(`cursor`).classList.remove(`up`)
+                }else{
+                    document.querySelector(`cursor`).classList.add(`up`)
+                }
+
+                document.querySelector(`cursor`).classList.add(`scroll`)
+                clearTimeout(scr)
+
+                scr = setTimeout(()=>{
+                    document.querySelector(`cursor`).classList.remove(`scroll`)
+                },500)
+            })
+        </script>
+    </body>
+</html>

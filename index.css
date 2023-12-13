@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@700;900&display=swap');
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Roboto";
+}
+
+h1, h2, h3{
+    font-family: "Roboto Slab";
+}
+
+h2{
+    font-size: xx-large;
+}
+
+div{
+    position: relative;
+}
+
+hero{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 64px;
+    background-color: black;
+    color: white;
+    position: relative;
+
+    background: url("./muffin.jpg");
+    background-size: cover; background-position: center;
+    z-index: -2;
+}
+hero svg, section svg{
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+hero::after{
+    position: absolute; content: "";
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(111deg, rgba(9,9,51,1) 0%, rgba(10,47,55,1) 100%);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+hero img{
+    width: 400px;
+    animation: img 1s forwards;
+}
+
+@keyframes img {
+    0%{
+        scale: 1.2;
+        rotate: 3deg;
+        opacity: 0.7;
+    }
+    100%{
+        scale: 1;
+        rotate: 0deg;
+        opacity: 1;
+    }
+}
+
+hero .tape{position: relative;}
+
+hero .tape p{
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: 'Roboto Slab';
+    opacity: 0;
+    animation: p 1.5s forwards;
+}
+@keyframes p{0%{opacity: 0; bottom: -100px;} 100%{opacity: 0.5; bottom: -32px;}}
+
+hero .tape::after{
+    display: block; content: "";
+    width: 150px; height: 30px;
+    position: absolute; top: 10px; left: 10px;
+    rotate: -10deg;
+    opacity: 0;
+    animation: tapeA 1s forwards;
+    animation-delay: 0.2s;
+    border-radius: 2px;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 5px,
+        #eee 5px,
+        #eee 10px
+      );;
+}
+
+hero .tape::before{
+    display: block; content: "";
+    width: 120px; height: 30px;
+    position: absolute; bottom: 16px; right: 10px;
+    rotate: -8deg;
+    opacity: 0;
+    animation: tapeB 1s forwards;
+    animation-delay: 0.4s;
+    z-index: 999;
+    border-radius: 2px;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 5px,
+        #eee 5px,
+        #eee 10px
+      );;
+}
+
+@keyframes tapeA {
+    0%{
+        top: -20px; left: -20px;
+        opacity: 0;
+        scale: 1.2;
+    }
+    100%{
+        top: 10px; left: 10px;
+        opacity: 0.8;
+    }
+}
+
+@keyframes tapeB {
+    0%{
+        bottom: -26px; right: -20px;
+        opacity: 0;
+        scale: 1.2;
+    }
+    100%{
+        bottom: 16px; right: 10px;
+        opacity: 0.8;
+    }
+}
+
+
+hero h1{
+    position: relative;
+    width: fit-content;
+
+    background: -webkit-linear-gradient(0deg, #eee, #5299a5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+hero h1:before{
+    display: block;
+    content: '"coding398"';
+    position: absolute;
+    text-align: right;
+    top:-18px;
+    right: -42px;
+    rotate: 3deg;
+    font-size: large;
+    color: #5aa8b6;
+    -webkit-text-fill-color: initial;
+}
+
+hero p{
+    line-height: 26px;
+    max-width: 700px;
+}
+
+#projects{
+    width: 100vw;
+    height: 85vh;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 24px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgb(3, 186, 252);
+}
+#accomplishments{
+    min-height: 80vh;
+    width: 100vw;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(243, 106, 62, 1);
+
+    padding-bottom: 200px;
+}
+#contacts{
+    background: rgba(175, 62, 243, 1);
+
+    min-height: 40vh;
+    width: 100vw;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section h2{margin-top:0;}
+
+.reel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+
+    overflow-x: scroll;
+}
+.reel::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.reel-big{
+    width: 1500px;
+    height: 400px;
+}
+
+.reel-big div{
+    width: 650px;
+    height: 375px;
+
+    animation: projectIn linear forwards;
+    animation-timeline: scroll(root block);
+}
+
+@keyframes projectIn {
+    0%{ transform: rotateX(35deg) rotateY(15deg); scale: 0.4; opacity: 0; }
+    5%{ transform: rotateX(30deg) rotateY(10deg); scale: 0.5; opacity: 1; }
+    20%{ transform: rotateX(0deg) rotateY(0deg); scale: 1; }
+}
+
+.reel-small{
+    height: 275px;
+    width: 1500px;
+    justify-content: left;
+    align-items: flex-start;
+    position: relative;
+    border-radius: 8px;
+}
+
+.reel-small div{
+    width: 400px;
+    height: 250px;
+    flex-shrink: 0;
+}
+
+.reel div{
+    background: linear-gradient(0deg, rgba(159, 0, 165, 0.507) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    overflow: visible;
+    margin-top: 6px; margin-bottom: 6px;
+}
+
+.reel div img{
+    max-height: 80%;
+    max-width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.reel div .b{
+    height: 42px;
+    border: none;
+    border-radius: 6px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: large;
+    font-family: "Roboto Slab";
+    background-color: rgba(255,255,255,0.85);
+    outline: 3px solid white;
+    display: block;
+}
+
+.reel div .b.h{
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.reel div .b.h:hover{
+    background-color: rgba(255,255,255,0.7);
+    margin-right: 3px;
+    margin-left: 3px;
+    scale: 1.03;
+    transition: 0.1s ease-out;
+}
+
+.reel div .b.featured{
+    background-color: rgba(100,100,255,0.85);
+    outline: 3px solid rgba(155,155,255,1);
+    color: white;
+}
+
+.reel div .b.indev{
+    background-color: rgba(100,155,100,0.85);
+    outline: 3px solid rgba(120,175,120,1);
+    color: white;
+}
+
+.reel div .b.archive{
+    background-color: rgba(255,100,100,0.85);
+    outline: 3px solid rgba(255,155,155,1);
+    color: black;
+}
+
+.reel div btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 64px;
+}
+.reel-big div btns{
+    height: 74px;
+}
+
+.scroller{
+    position: absolute;
+    height: 100%;
+    width: 64px;
+    background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: large;
+    cursor: pointer;
+    transition: ease-in 0.1s;
+    z-index: 2;
+}
+
+.scroller:active{
+    font-size: x-large;
+    transition: ease-out 0.1s;
+}
+
+.scroller.left{
+    left: 0;
+}
+.scroller.right{
+    right: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+#awards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.award{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 24px;
+    width: 400px;
+
+    animation: awardA linear forwards;
+	animation-timeline: scroll(root block);
+}
+
+.award:nth-child(2n){
+    animation: awardB linear forwards;
+    animation-timeline: scroll(root block);
+}
+.award:nth-child(3n){
+    animation: awardC linear forwards;
+    animation-timeline: scroll(root block);
+}
+
+.award badge{
+    width: 42px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    display: inline-block;
+    font-family: "Roboto Slab";
+
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.award .win{
+    background-color: rgba(243, 106, 62, 1);
+}
+
+.award h3{
+    display: inline;
+    padding: 6px;
+}
+
+.award grade{
+    width: 72px;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    display: block;
+    font-family: "Roboto Slab";
+    font-size: xx-large;
+    margin: auto;
+
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+@keyframes awardA {
+    0%{
+        scale: 0.5;
+        opacity: 0.5;
+        transform: translate(300px, 300px);
+    }
+    60%{
+        scale: 1; opacity: 1; transform: initial;
+    }
+}
+@keyframes awardB {
+    0%{
+        scale: 0.5;
+        opacity: 0.5;
+        transform: translate(-300px, 300px);
+    }
+    60%{
+        scale: 1; opacity: 1; transform: initial;
+    }
+}
+@keyframes awardC {
+    0%{
+        scale: 0.5;
+        opacity: 0.5;
+        transform: translate(300px, -300px);
+    }
+    60%{
+        scale: 1; opacity: 1; transform: initial;
+    }
+}
+
+#contacts div{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+#contacts a{
+    color: rgb(144, 238, 255);
+    text-decoration: none;
+}
+
+#contacts span{
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 24px;
+    text-align: left;
+    font-size: large;
+    flex-shrink: 0;
+    border-radius: 6px;
+}
+#contacts span i{
+    margin-right: 24px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .reel-small, .reel-big{
+        width: 1200px;
+    }
+    .award{
+        animation-timeline: initial !important;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .reel-small, .reel-big{
+        width: 1000px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .reel-small, .reel-big{
+        width: 800px;
+    }
+    .reel-big div{
+        height: fit-content;
+    }
+    hero p{
+        max-width: 400px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    hero{
+        height: 100vh;
+        box-sizing: border-box;
+        padding-top: 40%;
+    }
+    hero .tape p{ display: none; }
+    hero .tape{
+        position: absolute;
+        top: 24px;
+    }
+
+    .reel-big *{
+        animation-timeline: initial !important;
+    }
+}
+
+.ddd{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .reel-small, .reel-big{
+        width: 500px;
+    }
+
+    .reel-big div:nth-child(2){
+        display: none;
+    }
+
+    .ddd{
+        display: block;
+    }
+
+    #contacts span{
+        width: 260px;
+    }
+
+    #contacts span i{
+        margin-right: 6px;
+    }
+    #contacts div{
+        width: 650px;
+    }
+    #accomplishments{
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    hero{
+        height: 100vh;
+        box-sizing: border-box;
+        padding-top: 50%;
+    }
+    .reel-big{
+        height: 300px;
+    }
+    #contacts div{
+        width: 350px;
+    }
+    #contacts span{
+        width: 350px;
+    }
+    #projects{
+        height: 85vh;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    hero{
+        padding-top: 70%;
+    }
+    .reel-small, .reel-big{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    hero p{
+        max-width: 300px;
+    }
+    hero{
+        padding-top: 80%;
+    }
+    .award{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    #projects{
+        height: 100vh;
+    }
+    hero{
+        height: 120vh;
+    }
+}
+@media only screen and (max-height: 750px) {
+    #projects{
+        height: 120vh;
+    }
+}
+
+*{
+    cursor: none !important;
+}
+
+cursor{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    outline: 2px solid rgba(255,255,255,0.5);
+    position: fixed;
+    z-index: 999;
+    transition: 0.05s ease-out;
+    pointer-events: none;
+    transform: translate(-500px, -500px);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+cursor.link{
+    background-color: rgba(144, 238, 255, 0.5);
+    width: 30px;
+    height: 30px;
+    transition: 0.2s;
+}
+
+cursor.scroll{
+    width: 25px;
+    transition: width 0.05s ease-in;
+    transform-origin: center;
+    border-radius: 6px;
+}
+
+cursor.scroll::after{
+    display: block;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255,255,255,0.5);
+    position: relative;
+    border-radius: 6px;
+    animation: scroll 0.5s forwards infinite linear;
+}
+cursor.scroll.up::after{
+    animation-direction: reverse;
+}
+
+cursor.link.scroll::after{
+    display: none;
+}
+
+@keyframes scroll {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(calc(25px / 2));
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+}
