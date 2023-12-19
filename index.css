@@ -6,6 +6,10 @@ body{
     font-family: "Roboto";
 }
 
+.bi{
+    pointer-events: none;
+}
+
 h1, h2, h3{
     font-family: "Roboto Slab";
 }
@@ -180,7 +184,8 @@ hero p{
     flex-direction: column;
     align-items: center;
 
-    background: rgb(3, 186, 252);
+    background: rgb(0,64,77);
+    background: linear-gradient(180deg, rgba(0,64,77,1) 0%, rgba(8,19,68,1) 100%);
 }
 #accomplishments{
     min-height: 80vh;
@@ -195,12 +200,12 @@ hero p{
     flex-direction: column;
     align-items: center;
 
-    background: rgba(243, 106, 62, 1);
+    background: rgb(148, 68, 13);
 
     padding-bottom: 200px;
 }
 #contacts{
-    background: rgba(175, 62, 243, 1);
+    background: #111111;
 
     min-height: 40vh;
     width: 100vw;
@@ -239,15 +244,6 @@ section h2{margin-top:0;}
 .reel-big div{
     width: 650px;
     height: 375px;
-
-    animation: projectIn linear forwards;
-    animation-timeline: scroll(root block);
-}
-
-@keyframes projectIn {
-    0%{ transform: rotateX(35deg) rotateY(15deg); scale: 0.4; opacity: 0; }
-    5%{ transform: rotateX(30deg) rotateY(10deg); scale: 0.5; opacity: 1; }
-    20%{ transform: rotateX(0deg) rotateY(0deg); scale: 1; }
 }
 
 .reel-small{
@@ -266,7 +262,7 @@ section h2{margin-top:0;}
 }
 
 .reel div{
-    background: linear-gradient(0deg, rgba(159, 0, 165, 0.507) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(0, 100, 165, 0.507) 0%, rgba(0,0,0,1) 100%);
     border-radius: 8px;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
@@ -461,6 +457,7 @@ section h2{margin-top:0;}
     flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
+    color: white;
 }
 
 #contacts a{
@@ -470,7 +467,7 @@ section h2{margin-top:0;}
 
 #contacts span{
     width: 300px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 24px;
     text-align: left;
     font-size: large;
